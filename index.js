@@ -5,6 +5,18 @@ function hasTargetSum(array, target) {
 /* 
   Write the Big O time complexity of your function here
 */
+function hasTargetSum(array, target) {
+  for (let i=0; i < array.length; i++) {
+    let num = target - array[i];
+    
+    for (let j=i+1; j < array.length; j++) {
+      if (array[j] === num) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
 
 /* 
   Add your pseudocode here
